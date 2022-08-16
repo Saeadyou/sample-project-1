@@ -1,0 +1,52 @@
+// end-section style
+.end{
+    margin: 100px;
+    @include display-flex();
+    .content{
+        position: absolute;
+        @include display-flex(center,center,true);
+        & > *{
+            margin: 10px 0;
+        }
+        h2{
+            font-size: 62px;
+
+        }
+        p{
+            font-size: 24px;
+            color: gray;
+        }
+        .avatars{
+            width: fit-content;
+            @include display-flex;
+            img{
+                background-color: $white-color;
+                @include image-responsive;
+                @include circle(74px);
+                border: 5px solid $white-color;
+                margin-left: -16px
+            }
+        }
+        button{
+            @include blue-button;
+            padding: 14px 24px;
+            border-radius: 26px;
+        }
+    }
+    .d1{
+        @include display-flex();
+        @include circle(650px);
+        border: 1px solid $gray;
+        .d2{
+            @include display-flex();
+            @include circle(480px);
+            border: 1px solid $gray;
+            .d3{
+                @include circle(310px);
+                border: 1px solid $gray;
+                
+                
+            }
+        }
+    }
+}

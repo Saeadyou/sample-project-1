@@ -1,0 +1,77 @@
+// render-tabs-section style
+.render-tabs{
+    height: 500px;
+    width: 100%;
+    margin-bottom: 200px;
+    .container{
+        margin: 0 250px;
+        .tab{
+            overflow: hidden;
+            background-color: $gray-light;
+            padding: 5px;
+            border-radius: 10px;
+            width: fit-content;
+            margin:100px auto ;
+            button{
+                background-color: $gray-light;
+                padding: 12px 40px;
+                color: gray;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                transition: .5s;
+                &:hover{
+                    color: black;
+                }
+            }
+            button.active{
+                background-color: $white-color;
+                border-radius: 8px;
+                box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+            }
+        }
+        .details{
+            .tabcontent{
+                display: none;
+                .content{
+                    height: 100%;
+                    @include display-flex(space-around);
+                    .text{
+                        h2{
+                            font-size: 130px;
+                        }
+                        p{
+                            font-size: 28px;
+                            color: gray;
+                            margin: 20px 0 40px;
+                        }
+                        button{
+                            cursor: pointer;
+                            border-radius: 40px;
+                            border: none;
+                            padding: 15px 20px;
+                            @include blue-button();
+                            i{
+                                margin-left: 10px;
+                            }
+                        } 
+                    }
+                    .image{
+                        width: 45%;
+                        @include display-flex();
+                        img{
+                            @include image-responsive();
+                        }
+                    }
+                }
+            }
+            #Realistic, #Live{
+                .text{
+                    h2{
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+    }
+}

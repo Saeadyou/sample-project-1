@@ -1,0 +1,149 @@
+// header style
+header{
+    background-color: $gray-light;
+    padding: 20px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    @include display-flex(space-between);
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 10;
+    div{
+        @include display-flex(null,null);
+        button{
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 40px;
+            border: none;
+            margin: auto 15px;
+            padding: 15px 20px;
+            @include gray-button();
+        }
+        .menu-icon {
+            cursor: pointer;
+            flex-direction: column;
+            margin: auto 20px;
+            &:hover div{
+                transform: scaleX(0.8);
+            }
+            div{
+                width: 42px;
+                height: 2px;
+                background-color: gray;
+                margin: 4px 0;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+// modal style
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(201, 201, 201, 0.9);
+    .modal-content{
+        position: relative;
+        background-color: $white-color;
+        width: 47%;
+        height: 100%;
+        float: right;
+        @include display-flex(center, center, true);
+        & > *, form > *{
+            margin-bottom: 8px;
+            width: 400px;
+            text-align: center;
+            font-size: 16px
+        }
+        div{
+            @include display-flex();
+            a{ 
+                img{
+                    height: 90px;    
+                }
+                &:nth-child(2){
+                    font-size: 24px;
+                    margin-left: -20px;
+                }
+            }
+            span{
+                padding: 14px;
+                margin: 20px 0;
+                width: 200px;
+                border-top: 1px solid #efefef;
+                &:first-child{
+                    border-top: 1px solid #000;
+                }
+            }
+        }
+        button{
+            border: 2px solid #efefef;
+            padding: 20px 0;
+            border-radius: 50px;
+            background-color: $white-color;
+            transition: 0.4s;
+            img{
+                height: 25px;
+                width: 25px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+            &:hover{
+                border: 2px solid #000;
+            }
+        }
+        span{
+            color: rgb(150,150,150);
+            margin: 20px 0;
+        }
+        form{
+            input{
+                height: 50px;
+                border-radius: 10px;
+                background-color: $gray-light;
+                border: none;
+                text-align: left;
+                padding-left: 20px;
+                &::placeholder{
+                    color: rgb(179, 179, 179);
+                }
+                &:focus{
+                    outline: none;
+                }
+                &:last-child{
+                    @include blue-button;
+                    border-radius: 50px;
+                    text-align: center;
+                    padding-left: 0;
+                }
+            }
+        }
+        .forgot{
+            color: rgb(79, 79, 255);
+            font-size: 12px;
+        }
+        .close{
+            color: #000;
+            cursor: pointer;
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 28px;
+            margin: 0;
+            @include circle(40px);
+            transition: 0.2s;
+            &:hover{
+                transform: scale(0.8);
+                background-color: #efefef;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,58 @@
+// sign-up-section style
+.sign-up{
+    height: 500px;
+    .container{
+        margin: 100px;
+        height: 100%;
+        border-bottom: 2px solid rgb(224, 224, 224);
+        .left{
+            width: 50%;
+            float: left;
+            height: 100%;
+            @include display-flex(center,null,true);
+            h2{
+                font-size: 50px;
+            }
+            p{
+                font-size: 23px;
+                color: gray;
+                margin: 20px 0 35px;
+            }
+            form{
+                input{
+                    border: none;
+                    background-color:$gray-light;
+                    height: 46px;
+                    width: 300px;
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: gray;
+                    &::placeholder{
+                        color: rgb(179, 179, 179);
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                button{
+                    cursor: pointer;
+                    @include blue-button();
+                    border: none;
+                    height: 46px;
+                    border-radius: 10px;
+                    padding: 0 15px;
+                }
+            }
+        }
+        .right{
+            width: 50%;
+            float: right;
+            height: 100%;
+            padding: 60px 0;
+            @include display-flex();
+            img{
+                @include image-responsive();
+            }
+        }
+   }
+}

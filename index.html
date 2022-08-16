@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9a935443cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" />
+    <title>Paradox</title>
+</head>
+<body>
+    <!-- start header -->
+    <header>
+        <a href="#">
+            <img src="assets/img/logo.png" alt="" height="50px">
+        </a>
+        <div>
+            <button id="signin-button">Sign in</button>
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- sign in modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <a href="#">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+                <a href="#">Paradox</a>
+            </div>
+            <div>
+                <span id="signIn">Sign in</span>
+                <span id="createAccount">Create account</span>
+            </div>
+            <button><img src="assets/img/google.png" alt="">continue with Google</button>
+            <button><img src="assets/img/apple.png" alt="">continue with Apple</button>
+            <span>or sign in with email</span>
+            <form action="">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="button" value="Sign in">
+            </form>
+            <a  class="forgot" href="#">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- end header -->
+    <!-- start main-section -->
+    <section class="main-section">
+        <div class="container">
+            <div class="left">
+                <h2>Paradox</h2>
+                <p>The Real-time & powerful<br/>3d design for Web</p>
+                <div class="buttons">
+                    <button class="download">Download</button>
+                    <button class="learn">Learn more</button>
+                </div>
+                <div class="scroll">
+                    <button>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+                    <span>Scroll down</span>
+                </div>
+            </div>
+            <div class="right">
+                <img src="assets/img/man.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end main-section -->
+    <!-- start sign-up-section -->
+    <section class="sign-up">
+        <div class="container">
+            <div class="left">
+                <h2>Go from 3D<br/>to Website in no time.</h2>
+                <p>Without any effort, save a tone of time</p>
+                <form action="">
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="right">
+                <img src="assets/img/load.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end sign-up-section -->
+    <!-- start cards-section -->
+    <section class="generation">
+        <div class="container">
+            <h2>The 3D generation is here.</h2>
+            <div class="cards">
+                <div class="card">
+                    <a href="#">
+                        <div class="color1">
+                            <div class="new">NEW</div>
+                            <div class="button">
+                                <div class="circle1">
+                                    <div class="shape">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="circle2">
+                                    <div class="shape">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="circle3">
+                                    <div class="shape">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h5>3D team assets</h5>
+                    <p>Make your design more attractive</p>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <div class="color2">
+                            <div class="button">
+                                <div class="circle1">
+                                    <div class="shape"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <h5>Shared materials</h5>
+                    <p>Create, enable and use across your team</p>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <div class="color3">
+                            <div class="button">
+                                <span>share</span>
+                            </div>
+                        </div>
+                    </a>
+                    <h5>Live share</h5>
+                    <p>Make your design more attractive</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- end cards-section -->
+    <!-- start render-section -->
+    <section class="render-tabs">
+        <div class="container">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Render')" id="defaultOpen">Render faster</button>
+                <button class="tablinks" onclick="openTab(event, 'Realistic')">Realistic material</button>
+                <button class="tablinks" onclick="openTab(event, 'Live')">Live interaction</button>
+            </div>
+            <div class="details">
+                <div class="tabcontent" id="Render">
+                    <div class="content">
+                        <div class="text">
+                            <h2>8x</h2>
+                            <p>Faster live render than<br>other 3D app for web.</p>
+                            <button>Launch a demo <i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                        <div class="image">
+                            <img src="assets/img/live.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabcontent" id="Realistic">
+                    <div class="content">
+                        <div class="text">
+                            <h2>Realistic<br>materials</h2>
+                            <p>Faster live render than<br>other 3D design app for web.</p>
+                            <button>Launch a demo <i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                        <div class="image">
+                            <img src="assets/img/realistic.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabcontent" id="Live">
+                    <div class="content">
+                        <div class="text">
+                            <h2>Live<br>interaction</h2>
+                            <p>Faster live render than<br>other 3D app for web.</p>
+                            <button>Launch a demo <i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                        <div class="image">
+                            <img src="assets/img/live.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end render-section -->
+    <!-- start integrate-section -->
+    <section class="integrate">
+        <div class="left">
+            <img src="assets/img/integrate.png" alt="">
+        </div>
+        <div class="right">
+            <h2>Integrate your 3D designs</h2>
+            <p>Without any effort, save a ton of time.</p>
+            <ul>
+                <li><i class="fa-brands fa-accusoft"></i><a href="#">Framer</a></li>
+                <li><i class="fa-brands fa-affiliatetheme"></i><a href="#">Webflow</a></li>
+                <li><i class="fa-brands fa-android"></i><a href="#">Robot</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- end integrate-section -->
+    <!-- end discover-section -->
+    <section class="discover">
+        <div class="title">
+            <h2>Discover how it work</h2>
+        </div>
+        <div class="detail">
+            <div class="left">
+                <h3>Setup your<br>perfect scene.</h3>
+                <p>Amet minim mollit non deserunt ullanco est.</p>
+                <div>
+                    <button>
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <span>Watch tutorial</span>
+                </div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <div>
+                            <h5>Shared materials</h5>
+                            <p>Create, enable and use across your team</p>
+                        </div>
+                        <i class="fa-solid fa-toggle-off"></i>
+                    </li>
+                    <li>
+                        <div>
+                            <h5>Live interaction</h5>
+                            <p>Create, enable and use across your team</p>
+                        </div>
+                        <i class="fa-solid fa-computer-mouse"></i>
+                    </li>
+                    <li>
+                        <div>
+                            <h5>Realtime collaboration</h5>
+                            <p>Create, enable and use across your team</p>
+                        </div>
+                        <i class="fa-solid fa-bolt"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="left">
+                <h3>Build simple or<br>complex models.</h3>
+                <p>Anchor minimom muss non deserunt ullanco es ist ganz einfach.</p>
+                <div>
+                    <button>
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <span>Watch tutorial</span>
+                </div>
+            </div>
+            <div class="right">
+                <img src="assets/img/coffee.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end discover-section -->
+    <!-- start people-section -->
+    <section class="people">
+        <div class="title">
+            <h2>People are talking...</h2>
+            <p>Amet minim mollit non deserunt</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/img/avatar1.png" alt="">
+                <p>“It has been an absolute pleasure dealing with Scan during the lockdown. Our church began to livestream our services, and Scan had a great selection of me."</p>
+                <h5>Emine Isik</h5>
+                <p>Nursing Assistant</p>
+            </div>
+            <div class="card">
+                <img src="assets/img/avatar2.png" alt="">
+                <p>“I was also lucky enough to read @Coding_Career early and I was thoroughly blown away! It’s the book I wish I had when I started my dev career.”</p>
+                <h5>Emine Isik</h5>
+                <p>Nursing Assistant</p>
+            </div>
+            <div class="card">
+                <img src="assets/img/avatar3.png" alt="">
+                <p>“Wow! The immense wealth of knowledge and experience shared in “The Coding Career Handbook” cannot be overstated. I love how Shawn is able to take."</p>
+                <h5>Emine Isik</h5>
+                <p>Nursing Assistant</p>
+            </div>
+            <div class="card">
+                <img src="assets/img/avatar4.png" alt="">
+                <p>“The links to high-value blog posts already make the book worth it, never mind the amazing insight and context provided by Shawn. Must buy for #CodeNewbies."</p>
+                <h5>Emine Isik</h5>
+                <p>Nursing Assistant</p>
+            </div>
+            <div class="card">
+                <img src="assets/img/avatar5.png" alt="">
+                <p>“For anyone looking for career advice as a coder but is tired of being told they have to do X or never do Y. Shawn is sharing his personal experiences and structure."</p>
+                <h5>Emine Isik</h5>
+                <p>Nursing Assistant</p>
+            </div>
+            <div class="card">
+                <img src="assets/img/avatar6.png" alt="">
+                <p>“I wish I had this book when I was switching jobs. It helps you understand what skills you should leverage and really encourages you not underlevel yourself!."</p>
+                <h5>Emine Isik</h5>
+                <p>Nursing Assistant</p>
+            </div>
+        </div>
+    </section>
+    <!-- end people-section -->
+    <!-- start dark-section -->
+    <section class="dark">
+        <div class="top">
+            <h2>Delightfully simple &<br>powerful 3D design tool</h2>
+            <div class="forward">
+                <div class="header">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <div class="body">
+                    <div class="left"></div>
+                    <div class="right">
+                        <img src="assets/img/gear.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </section>
+    <!-- end dark-section -->
+    <!-- start end-section -->
+    <section class="end">
+        <div class="content">
+            <h2>
+                Ready to use Paradox?</h2>
+            <p>Join thousand users and teams in the community</p>
+            <div class="avatars">
+                <img src="assets/img/avatar1.png" alt="">
+                <img src="assets/img/avatar4.png" alt="">
+                <img src="assets/img/avatar2.png" alt="">
+                <img src="assets/img/avatar6.png" alt="">
+                <img src="assets/img/avatar3.png" alt="">
+            </div>
+            <button>Get started</button>
+        </div>
+        <div class="d1">
+            <div class="d2">
+                <div class="d3">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end end-section -->
+    <!-- start footer-section -->
+    <footer>
+        <div class="top">
+            <div class="left1" id="">
+                <h5>Product</h5>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">pricing</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </div>
+            <div class="left2" id="">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="left3" id="">
+                <h5>Community</h5>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Linked in</a></li>
+                </ul>
+            </div>
+            <div class="left4" id="">
+                <div>
+                    <img src="assets/img/logo.png" alt="">
+                    <h5>Paradox</h5>
+                </div>
+                <p>The Real-time & powerful 3D design for web.</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <span>UI: https://ui8-paradox.framer.website/#section-1</span>
+            <span>Made by Mahdi Yousefi</span>
+        </div>
+    </footer>
+    <!-- end footer-section -->
+<script src="assets/main.js"></script>
+</body>
+</html>

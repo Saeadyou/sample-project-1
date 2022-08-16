@@ -1,0 +1,38 @@
+// mixins
+@mixin display-flex ($justify-content:center,$align-items:center,$column:false) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    @if($column) {
+        flex-direction:column;
+    }
+}
+@mixin blue-button{
+    background-color: $blue-button;
+    color: $white-color;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover{
+        background-color: $blue-button-hover;
+    }
+}
+@mixin gray-button{
+    background-color: $gray;
+    color: black;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover{
+        background-color: rgba(0, 0, 0,0.8) ;
+        color: $white-color;
+    }
+}
+@mixin image-responsive{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@mixin circle($size) {
+    height: $size;
+    width: $size;
+    border-radius: $size * 0.5;
+}

@@ -1,0 +1,59 @@
+// integrate-section style
+.integrate{
+    background-color: $gray-light;
+    height: 700px;
+    width: 100%;
+    padding: 100px;
+    @include display-flex(space-between);
+    .left{
+        width: 50%;
+        img{
+            @include image-responsive;
+        }
+    }
+    .right{
+        width: 40%;
+        h2{
+            font-size: 55px;    
+        }
+        p{
+            font-size: 22px;
+            color: gray;
+            margin: 30px 0 50px;
+        }
+        ul{
+            li{
+                border-top: 1px solid rgba(0,0,0,0.1);
+                padding: 20px 0;
+                i{
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 25px;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+                a{
+                    &:hover{
+                        color: blueviolet;
+                    }
+                }
+                &:nth-child(1){
+                    i{
+                        background-color: aqua;
+                    }
+                }
+                &:nth-child(2){
+                    i{
+                        background-color: darkkhaki;
+                    }
+                }
+                &:nth-child(3){
+                    i{
+                        background-color: cornflowerblue;
+                    }
+                }
+            }
+            
+        }
+    }
+}

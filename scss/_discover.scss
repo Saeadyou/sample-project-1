@@ -1,0 +1,115 @@
+// discover-section style
+.discover{
+    width: 100%;
+    .title{
+        h2{
+            text-align: center;
+            font-size: 50px;
+            margin: 100px 0 60px;
+        }
+    }
+    .detail{
+        height: 500px;
+        background-color: $gray-light;
+        margin: 70px 100px;
+        border-radius: 20px;
+        @include display-flex();
+        .left{
+            height: 100%;
+            width: 50%;
+            @include display-flex(center,null,true);
+            border-right: 1px solid rgba(0,0,0,0.1);
+            padding: 0 80px;
+            h3{
+                font-size: 28px;
+            }
+            p{
+                color: gray;
+                font-size: 20px;
+                margin: 20px 0;
+            }
+            div{
+                margin-top: 120px;
+                width: fit-content;
+                button{
+                    @include circle(60px);
+                    border: none;
+                    background-color: $blue-button-hover;
+                    color: $white-color;
+                    transition: .3s;
+                    i{
+                        font-size: 14px;
+                        transition: .3s;
+                    }
+                }
+                span{
+                    margin-left: 20px;
+                    transition: .3s;
+                }
+                &:hover span{
+                    color: $blue-button-hover;
+                }
+                &:hover button{
+                    background-color: $blue-button;
+                    i{
+                        transform: scale(1.4);
+                    }
+                }
+            }        
+        }
+        .right{
+            height: 100%;
+            width: 50%;
+            @include display-flex(center,null,true);
+            padding: 0 80px;
+            ul{
+                li{
+                    padding: 50px 0;
+                    @include display-flex(space-between);
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
+                    &:nth-child(3){
+                        border-bottom:none;
+                    }
+                    div{
+                        h5{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 14px;
+                            color: gray;
+                        }
+                    }
+                    i{
+                        height: 60px;
+                        width: 60px;
+                        font-size: 20px;
+                        border-radius: 10px;
+                        @include display-flex();
+                        
+                    }
+                    &:nth-child(1){
+                        i{
+                            background-color: aqua;
+                        }
+                    }
+                    &:nth-child(2){
+                        i{
+                            background-color: darkkhaki;
+                        }
+                    }
+                    &:nth-child(3){
+                        i{
+                            background-color: cornflowerblue;
+                        }
+                    }
+                }
+            }
+            img{
+                @include image-responsive;
+                background-color: orange;
+                border-radius: 50%;
+                box-shadow: 2px 2px 20px 8px red;
+            }
+        }
+    }
+}

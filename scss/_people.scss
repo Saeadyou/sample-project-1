@@ -1,0 +1,49 @@
+// people-section style
+.people{
+    width: 100%;
+    height: fit-content;
+    padding: 100px;
+    background-color: $gray-light;
+    .title{
+        text-align: center;
+        h2{
+            font-size: 54px;
+        }
+        p{
+            font-size: 24px;
+            color: gray;
+            margin-bottom: 50px;
+        }
+    }
+    .cards{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto auto;
+        .card{
+            background-color: $white-color;
+            border-radius: 20px;
+            padding: 40px;
+            color: rgb(109, 109, 109);
+            img{
+                // height: 20px;
+                @include circle(70px);
+                margin-bottom: 20px;
+                // @include image-responsive;
+            }
+            p{
+                line-height: 30px;
+                &:nth-of-type(1){
+                    font-style: italic;
+                }
+                &:nth-of-type(2){
+                    color: rgb(149, 149, 149);
+                }
+            }
+            h5{
+                color: rgb(70, 70, 70);
+                margin: 40px 0 10px;
+                font-size: 18px;
+            }
+        }
+    }
+}
