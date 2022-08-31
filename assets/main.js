@@ -4,7 +4,7 @@ document.getElementById('defaultOpen').click();
 
 function openTab(evt, tabName) {
 
-    var i, tabcontent, tablinks;
+    var tabcontent, tablinks;
     
     tabcontent = document.getElementsByClassName('tabcontent');
     for (let i = 0; i < tabcontent.length; i++) {
@@ -49,4 +49,21 @@ span1.onclick = () => {
 span2.onclick = () => {
     span2.style.borderTop = "1px solid #000;";
     span1.style.borderTop = "1px solid #efefef;";
+}
+
+//  footer accordion menu in mobile view
+var acc = document.getElementsByClassName('accordion');
+var accPanel = document.getElementsByClassName('accordionPanel');
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener('click', function() {
+        this.classList.toggle('active');
+
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+    }); 
 }

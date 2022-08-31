@@ -7,10 +7,10 @@
     .title{
         text-align: center;
         h2{
-            font-size: 54px;
+            font-size: $font-size-h2 - 12;
         }
         p{
-            font-size: 24px;
+            font-size: $font-size-p;
             color: gray;
             margin-bottom: 50px;
         }
@@ -25,10 +25,8 @@
             padding: 40px;
             color: rgb(109, 109, 109);
             img{
-                // height: 20px;
                 @include circle(70px);
                 margin-bottom: 20px;
-                // @include image-responsive;
             }
             p{
                 line-height: 30px;
@@ -42,8 +40,52 @@
             h5{
                 color: rgb(70, 70, 70);
                 margin: 40px 0 10px;
-                font-size: 18px;
+                font-size: $font-size-p - 6;
             }
+        }
+    }
+    @include tablet{
+        padding: 20px;
+        .title{
+            text-align: center;
+            h2{
+                font-size: $font-size-h2 - 22;
+            }
+            p{
+                font-size: $font-size-p - 4;
+                margin-bottom: 10px;
+            }
+        }
+        .cards{
+            grid-template-columns: auto auto;
+            .card{
+                padding: 20px;
+                img{
+                    @include circle(50px);
+                    margin-bottom: 10px;
+                }
+                p{
+                    line-height: 20px;
+                    font-size: $font-size-p - 10;
+                }
+                h5{
+                    font-size: $font-size-p - 8;
+                }
+            }
+        }
+    }
+    @include phone{
+        .title{
+            h2{
+                font-size: $font-size-h2 - 37;
+            }
+            p{
+                font-size: $font-size-p - 8;
+            }
+        }
+        .cards{
+            grid-template-columns: auto;
+            
         }
     }
 }

@@ -1,8 +1,10 @@
 // sign-up-section style
 .sign-up{
     height: 500px;
+    width: 100%;
+    display: block;
     .container{
-        margin: 100px;
+        margin: 0 100px;
         height: 100%;
         border-bottom: 2px solid rgb(224, 224, 224);
         .left{
@@ -11,10 +13,10 @@
             height: 100%;
             @include display-flex(center,null,true);
             h2{
-                font-size: 50px;
+                font-size: $font-size-h2 - 20;
             }
             p{
-                font-size: 23px;
+                font-size: $font-size-p;
                 color: gray;
                 margin: 20px 0 35px;
             }
@@ -51,8 +53,42 @@
             padding: 60px 0;
             @include display-flex();
             img{
-                @include image-responsive();
+                @include image-responsive;
             }
         }
    }
+   @include tablet{
+        height: 800px;
+        .container{
+            margin: 0 20px;
+            @include display-flex(center,center,true);
+            .left{
+                h2{
+                    font-size: $font-size-h2 - 30;
+                }
+                p{
+                    font-size: $font-size-p - 4;
+                }
+                width: 100%;
+                margin-bottom: 0;
+            }
+            .right{
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    @include phone{
+        height: 550px;
+        .container{
+            .left{
+                h2{
+                    font-size: $font-size-h2 - 45;
+                }
+                p{
+                    font-size: $font-size-p - 8;
+                }
+            }
+        }
+    }
 }
