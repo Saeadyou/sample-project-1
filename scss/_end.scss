@@ -9,11 +9,11 @@
             margin: 10px 0;
         }
         h2{
-            font-size: 62px;
+            font-size: $font-size-h2 - 12;
 
         }
         p{
-            font-size: 24px;
+            font-size: $font-size-p;
             color: gray;
         }
         .avatars{
@@ -46,6 +46,51 @@
                 border: 1px solid $gray;
                 
                 
+            }
+        }
+    }
+    @include tablet{
+        margin: 20px;
+        .content{
+            h2{
+                font-size: $font-size-h2 - 22;
+            }
+            p{
+                font-size: $font-size-p - 4;
+            }
+        }
+        .d1{
+            @include circle(500px);
+            .d2{
+                @include circle(360px);
+                .d3{
+                    @include circle(220px);
+                }
+            }
+        }
+    }
+    @include phone{
+        .content{
+            h2{
+                font-size: $font-size-h2 - 37;
+            }
+            p{
+                font-size: $font-size-p - 8;
+            }
+            .avatars{
+                img{
+                    @include circle(46px);
+                    border: 3px solid $white-color;
+                }
+            }
+        }
+        .d1{
+            @include circle(400px);
+            .d2{
+                @include circle(280px);
+                .d3{
+                    @include circle(160px);
+                }
             }
         }
     }

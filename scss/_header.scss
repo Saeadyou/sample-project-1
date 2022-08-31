@@ -60,7 +60,7 @@ header{
             margin-bottom: 8px;
             width: 400px;
             text-align: center;
-            font-size: 16px
+            font-size: $font-size-p - 8;
         }
         div{
             @include display-flex();
@@ -69,7 +69,7 @@ header{
                     height: 90px;    
                 }
                 &:nth-child(2){
-                    font-size: 24px;
+                    font-size: $font-size-p;
                     margin-left: -20px;
                 }
             }
@@ -127,7 +127,7 @@ header{
         }
         .forgot{
             color: rgb(79, 79, 255);
-            font-size: 12px;
+            font-size: $font-size-p - 12;
         }
         .close{
             color: #000;
@@ -135,7 +135,7 @@ header{
             position: absolute;
             top: 30px;
             right: 40px;
-            font-size: 28px;
+            font-size: $font-size-p + 4;
             margin: 0;
             @include circle(40px);
             transition: 0.2s;
@@ -144,6 +144,14 @@ header{
                 background-color: #efefef;
             }
 
+        }
+        @include tablet{
+            width: 100%;
+        }
+        @include phone{
+            & *{
+                scale: 0.85;
+            }
         }
     }
 }

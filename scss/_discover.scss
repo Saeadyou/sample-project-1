@@ -4,7 +4,7 @@
     .title{
         h2{
             text-align: center;
-            font-size: 50px;
+            font-size: $font-size-h2 - 20;
             margin: 100px 0 60px;
         }
     }
@@ -21,11 +21,11 @@
             border-right: 1px solid rgba(0,0,0,0.1);
             padding: 0 80px;
             h3{
-                font-size: 28px;
+                font-size: $font-size-p + 4;
             }
             p{
                 color: gray;
-                font-size: 20px;
+                font-size: $font-size-p - 4;
                 margin: 20px 0;
             }
             div{
@@ -38,7 +38,7 @@
                     color: $white-color;
                     transition: .3s;
                     i{
-                        font-size: 14px;
+                        font-size: $font-size-p - 10;
                         transition: .3s;
                     }
                 }
@@ -72,17 +72,17 @@
                     }
                     div{
                         h5{
-                            font-size: 18px;
+                            font-size: $font-size-p - 6;
                         }
                         p{
-                            font-size: 14px;
+                            font-size: $font-size-p - 10;
                             color: gray;
                         }
                     }
                     i{
                         height: 60px;
                         width: 60px;
-                        font-size: 20px;
+                        font-size: $font-size-p - 4;
                         border-radius: 10px;
                         @include display-flex();
                         
@@ -108,7 +108,98 @@
                 @include image-responsive;
                 background-color: orange;
                 border-radius: 50%;
-                box-shadow: 2px 2px 20px 8px red;
+                box-shadow: 0 0 16px 6px red;
+            }
+        }
+    }
+    @include tablet{
+        .title{
+            h2{
+                font-size: $font-size-h2 - 30;
+                margin: 60px 0 20px;
+            }
+        }
+        .detail{
+            margin: 40px 20px;
+            @include display-flex(center,center,true);
+            height: 600px;
+            .left{
+                width: 100%;
+                border: none;
+                padding: 0 20px;
+                h3{
+                    font-size: $font-size-p ;
+                }
+                p{
+                    color: gray;
+                    font-size: $font-size-p - 8;
+                    margin: 20px 0;
+                }
+                div{
+                    margin: 0;
+                    button{
+                        @include circle(50px);
+                    }
+                    span{
+                        font-size: $font-size-p - 10;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .right{
+                width: 100%;
+                padding: 0 20px;
+                ul{
+                    border-top: 1px solid rgba(0,0,0,0.1);
+                    li{
+                        padding: 30px 0;
+                        div{
+                            h5{
+                                font-size: $font-size-p - 10;
+                            }
+                            p{
+                                font-size: $font-size-p - 12;
+                            }
+                        }
+                        i{
+                            height: 40px;
+                            width: 40px;
+                            font-size: $font-size-p - 8;
+                        }
+                    }
+                }
+                img{
+                    width: 60%;
+                    margin: 0 auto 20px;
+                    
+                }
+            }
+        }
+    }
+    @include phone{
+        .title{
+            h2{
+                font-size: $font-size-h2 - 45;
+                margin: 60px 0 20px;
+            }
+        }
+        .detail{
+            margin: 40px 20px;
+            height: 400px;
+            .left{
+                h3{
+                    font-size: $font-size-p  - 4;
+                }
+                p{
+                    font-size: $font-size-p - 10;
+                }
+            }
+            .right{
+                ul{
+                    li{
+                        padding: 10px 0;
+                    }
+                }
             }
         }
     }

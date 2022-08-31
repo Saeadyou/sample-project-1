@@ -36,3 +36,14 @@
     width: $size;
     border-radius: $size * 0.5;
 }
+@mixin tablet{
+    @media screen and (max-width : $tablet-width) {
+        @content;
+    }
+}
+
+@mixin phone{
+    @media screen and (max-width : $mobile-width) {
+        @content;
+    }
+}
