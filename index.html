@@ -17,7 +17,7 @@
         </a>
         <div>
             <button id="signin-button">Sign in</button>
-            <div class="menu-icon">
+            <div class="menu-icon" id="menu-button">
                 <div></div>
                 <div></div>
             </div>
@@ -25,7 +25,7 @@
     </header>
 
     
-    <!-- sign in modal -->
+    <!-- sign in button modal -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -45,9 +45,32 @@
             <form action="">
                 <input type="text" placeholder="Username">
                 <input type="password" placeholder="Password">
-                <input type="button" value="Sign in">
+                <input type="button" value="Sign in" id="signInInModal">
             </form>
-            <a  class="forgot" href="#">Forgot password?</a>
+            <a  class="forgot" href="#" id="forgotA">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- menu button modal -->
+    <div id="modal2">
+        <div class="modal-content2">
+            <span class="close">&times;</span>
+            <a href="#">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Community <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <p>Talk to sale</p>
+            <p>saeadyou@gmail.com</p>
+            <button>
+                <i class="fa-solid fa-envelope"></i>
+            </button>
         </div>
     </div>
 

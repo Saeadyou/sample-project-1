@@ -22,15 +22,52 @@ function openTab(evt, tabName) {
 
 // modal
 var modal = document.getElementById('modal');
+var modal2 = document.getElementById('modal2');
 var btn = document.getElementById('signin-button');
+var menuBtn = document.getElementById('menu-button');
+
 var close = document.getElementsByClassName('close')[0];
+var close2 = document.getElementsByClassName('close')[1];
+
+var signInSpan = document.getElementById('signIn');
+var createAccountSpan = document.getElementById('createAccount');
+var signInButton = document.getElementById('signInInModal');
+var forgotA = document.getElementById('forgotA');
+
 
 btn.onclick = () => {
     modal.style.display = "block";
 }
 
+menuBtn.onclick = () => {
+    modal2.style.display = "block";
+}
+
 close.onclick = function() {
     modal.style.display = "none";
+}
+
+close2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+signInSpan.onmouseup = function() {
+    signInSpan.style.borderTop = "1px solid #000";
+    createAccountSpan.style.borderTop = "1px solid #efefef";
+    createAccountSpan.style.color = "#999";
+    signInSpan.style.color = "#000";
+    
+    forgotA.innerText = "Forgot password";
+    signInButton.value = "Sign In";
+}
+
+createAccountSpan.onmouseup = () => {
+    createAccountSpan.style.borderTop = "1px solid #000";
+    signInSpan.style.borderTop = "1px solid #efefef";
+    signInSpan.style.color = "#999";
+    createAccountSpan.style.color = "#000";
+    signInButton.value = "Create an account";
+    forgotA.innerText = "Got an account? Sign in";
 }
 
 window.onclick = (event) => {
